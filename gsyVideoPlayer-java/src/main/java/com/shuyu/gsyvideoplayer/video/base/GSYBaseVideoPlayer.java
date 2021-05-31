@@ -15,8 +15,6 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
 
-import androidx.transition.TransitionManager;
-
 import com.shuyu.gsyvideoplayer.R;
 import com.shuyu.gsyvideoplayer.utils.CommonUtil;
 import com.shuyu.gsyvideoplayer.utils.Debuger;
@@ -448,7 +446,7 @@ public abstract class GSYBaseVideoPlayer extends GSYVideoControlView {
             //如果暂停了
             pauseFullBackCoverLogic(gsyVideoPlayer);
             if (mShowFullAnimation) {
-                TransitionManager.beginDelayedTransition(vp);
+//                TransitionManager.beginDelayedTransition(vp);
 
                 LayoutParams lp = (LayoutParams) gsyVideoPlayer.getLayoutParams();
                 lp.setMargins(mListItemRect[0], mListItemRect[1], 0, 0);
@@ -714,7 +712,7 @@ public abstract class GSYBaseVideoPlayer extends GSYVideoControlView {
                 mInnerHandler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        TransitionManager.beginDelayedTransition(vp);
+//                        TransitionManager.beginDelayedTransition(vp);
                         resolveFullVideoShow(context, gsyVideoPlayer, frameLayout);
                         mFullAnimEnd = true;
                     }

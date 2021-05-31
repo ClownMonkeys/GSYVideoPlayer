@@ -25,7 +25,7 @@ import com.shuyu.gsyvideoplayer.video.base.GSYVideoPlayer;
 import java.io.File;
 import java.util.Map;
 
-import androidx.transition.TransitionManager;
+//import androidx.transition.TransitionManager;
 
 import static com.shuyu.gsyvideoplayer.utils.CommonUtil.getActionBarHeight;
 import static com.shuyu.gsyvideoplayer.utils.CommonUtil.getStatusBarHeight;
@@ -200,9 +200,9 @@ public class GSYVideoHelper {
             public void run() {
                 //开始动画
                 if (mFullViewContainer != null) {
-                    TransitionManager.beginDelayedTransition(mFullViewContainer);
+//                    TransitionManager.beginDelayedTransition(mFullViewContainer);
                 } else {
-                    TransitionManager.beginDelayedTransition(mWindowViewContainer);
+//                    TransitionManager.beginDelayedTransition(mWindowViewContainer);
                 }
                 resolveMaterialFullVideoShow(mGsyVideoPlayer);
                 resolveChangeFirstLogic(600);
@@ -275,7 +275,7 @@ public class GSYVideoHelper {
             mHandler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    TransitionManager.beginDelayedTransition(mFullViewContainer);
+//                    TransitionManager.beginDelayedTransition(mFullViewContainer);
                     FrameLayout.LayoutParams lp = (FrameLayout.LayoutParams) gsyVideoPlayer.getLayoutParams();
                     lp.setMargins(mNormalItemRect[0], mNormalItemRect[1], 0, 0);
                     lp.width = mNormalItemSize[0];

@@ -19,7 +19,7 @@ import com.shuyu.gsyvideoplayer.video.StandardGSYVideoPlayer;
 import java.io.File;
 import java.util.Map;
 
-import androidx.transition.TransitionManager;
+//import androidx.transition.TransitionManager;
 
 import static com.shuyu.gsyvideoplayer.utils.CommonUtil.getActionBarHeight;
 import static com.shuyu.gsyvideoplayer.utils.CommonUtil.getStatusBarHeight;
@@ -247,7 +247,7 @@ public class ListVideoUtil {
             @Override
             public void run() {
                 //开始动画
-                TransitionManager.beginDelayedTransition(fullViewContainer);
+//                TransitionManager.beginDelayedTransition(fullViewContainer);
                 resolveMaterialFullVideoShow(gsyVideoPlayer);
                 resolveChangeFirstLogic(600);
             }
@@ -310,7 +310,7 @@ public class ListVideoUtil {
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    TransitionManager.beginDelayedTransition(fullViewContainer);
+//                    TransitionManager.beginDelayedTransition(fullViewContainer);
                     FrameLayout.LayoutParams lp = (FrameLayout.LayoutParams) gsyVideoPlayer.getLayoutParams();
                     lp.setMargins(listItemRect[0], listItemRect[1], 0, 0);
                     lp.width = listItemSize[0];
